@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 *{
   box-sizing: border-box;
   text-align: center;
 }
+
+
 
 html, body{
   margin: 0;
@@ -10,7 +13,7 @@ html, body{
 }
 
 body{
-
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 img{
@@ -52,12 +55,13 @@ header ul{
 .nav__link{
   color: hsl(219, 68%, 15%);
   margin-left: 2rem;
+  font-size: 1.25rem;
   text-decoration: none;
 }
 
 .nav__link:hover{
   text-decoration: underline;
-  font-size: 1.25rem;
+  font-weight: bold;
   transition: 0.3s;
 }
 
@@ -78,24 +82,40 @@ header ul{
   color: white;
   font-size: 4rem;
   text-align: center;
+  padding: 1rem 0;
 }
 
 .content--paragraph{
+  padding: 1rem 0;
   font-size: 1.25rem;
 }
 
 .sec .content--paragraph{
-
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 .sec .image{
-  
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.vision, .mission{
+  background-color: hsl(59, 90%, 61%);
+  color: hsl(228, 85%, 9%);
+  border-radius: 1rem;
+  padding: 1rem 0;
+  margin: 1rem;
 }
 
 
 @media only screen and (min-width:768px)
 {/* for desktop */
 
-  *{
+  body{
     text-align: left;
   }
 
@@ -119,5 +139,29 @@ header ul{
     background-color: white;
     color: hsl(59, 90%, 61%);
     font-size: 3rem;
+  }
+  .sec .content--paragraph{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .sec .image{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .block{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    padding: 2rem 0;
+  }
+
+  .vision, .mission{
+    text-align: center;
+
   }
 }
